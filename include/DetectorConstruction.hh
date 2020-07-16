@@ -13,12 +13,10 @@ public:
         InitializeMaterials();
     }
 private:
-    G4Material* vaccum;
+    G4Material* vacuum;
     G4Material* wolfram;
     G4LogicalVolume* CreateDetector();
-    G4LogicalVolume* CreateCylinderWithHole();
     G4LogicalVolume* CreateCylinder();
-    G4LogicalVolume* wolfram_logic;
     G4LogicalVolume* detector_logic;
 
     void InitializeMaterials();
