@@ -10,12 +10,10 @@ public:
     void GeneratePrimaries(G4Event *anEvent) override;
 
     ~PrimaryGeneratorAction() {
-        delete particleSource;
         delete fParticleGun;
     }
     double x = 0, y = 0, z = 0;
 private:
     G4ParticleGun* fParticleGun;
-    G4GeneralParticleSource *particleSource;
 
 };

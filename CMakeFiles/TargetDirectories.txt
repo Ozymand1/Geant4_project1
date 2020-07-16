@@ -1,0 +1,3 @@
+/home/Semyon/GEANT4projects/Geant4_project1/CMakeFiles/edit_cache.dir
+/home/Semyon/GEANT4projects/Geant4_project1/CMakeFiles/rebuild_cache.dir
+/home/Semyon/GEANT4projects/Geant4_project1/CMakeFiles/Geant4_project1.dir

@@ -1,31 +1,35 @@
-#include <DetectorConstruction.hh>
 #include "RunAction.hh"
-#include "TH1D.h"
-#include "TTree.h"
-#include "TFile.h"
+#include "g4analysis.hh"
 
-using namespace CLHEP;
 
 void RunAction::BeginOfRunAction(const G4Run *aRun) {
-    G4UserRunAction::BeginOfRunAction(aRun);
-    Angle45 = new TTree("Angle 45", "Angle 45");
-    Angle45->Branch("angle 45", &energy, "energy/D");
+    G4AnalysisManager *analysisManager = G4Analysis::ManagerInstance("root");
+    analysisManager->OpenFile("1000MeVRunData");
+    tupleId->analysisManager = analysisManager;
 
-    Angle90 = new TTree("Angle 90", "Angle 90");
-    Angle90->Branch("angle 90", &energy, "energy/D");
+    int FortyFiveId = analysisManager->CreateNtuple("0.5 MeV", "0.5 Run data");
+    analysisManager->CreateNtupleDColumn("A" + std::to_string(45));
+    analysisManager->FinishNtuple(FortyFiveId);
+    tupleId->FortyFiveId = FortyFiveId;
 
-    Angle135 = new TTree("Angle 135", "Angle 135");
-    Angle135->Branch("angle 135", &energy, "energy/D");
+    int NinetyId = analysisManager->CreateNtuple("0.5 MeV", "0.5 Run data");
+    analysisManager->CreateNtupleDColumn("A" + std::to_string(90));
+    analysisManager->FinishNtuple(NinetyId);
+    tupleId->NinetyId = NinetyId;
 
-    outFile = new TFile("500MeVRun.root", "RECREATE");
+    int HundredThirtyFiveId = analysisManager->CreateNtuple("0.5 MeV", "0.5 Run data");
+    analysisManager->CreateNtupleDColumn("A" + std::to_string(135));
+    analysisManager->FinishNtuple(HundredThirtyFiveId);
+    tupleId->HundredThirtyFiveId = HundredThirtyFiveId;
 }
+
 void RunAction::EndOfRunAction(const G4Run *aRun) {
     G4UserRunAction::EndOfRunAction(aRun);
-    Angle45->Write();
-    Angle90->Write();
-    Angle135->Write();
-    delete outFile;
+    G4AnalysisManager* analysisManager = G4Analysis::ManagerInstance("root");
+    analysisManager->Write();
+    analysisManager->CloseFile(true);
 }
-RunAction::RunAction() {
+
+RunAction::RunAction(TupleId *tupleId) : tupleId(tupleId) {
 
 }

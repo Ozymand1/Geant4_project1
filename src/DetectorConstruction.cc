@@ -1,3 +1,4 @@
+
 #include "DetectorConstruction.hh"
 #include <G4NistManager.hh>
 #include <G4Box.hh>
@@ -6,6 +7,9 @@
 #include "G4LogicalVolume.hh"
 #include "G4SystemOfUnits.hh"
 #include <G4Tubs.hh>
+
+#include "CylindricalSD.hh"
+
 
 G4VPhysicalVolume* DetectorConstruction::Construct() {
     G4bool checkOverlaps = true;
@@ -57,7 +61,7 @@ G4LogicalVolume* DetectorConstruction::CreateDetector() {
                         0,
                         2 * pi);
 
-    auto detector_logic =
+    detector_logical =
             new G4LogicalVolume(detectorSolid,
                                 vacuum,
                                 "detector");
@@ -70,7 +74,7 @@ G4LogicalVolume* DetectorConstruction::CreateDetector() {
                        0,
                        2 * pi);
 
-    auto cylinder_with_hole_logic =
+    cylinder_with_hole_logic =
             new G4LogicalVolume(cylinder_with_hole_solid,
                                 wolfram,
                                 "cylinder");
@@ -80,7 +84,7 @@ G4LogicalVolume* DetectorConstruction::CreateDetector() {
                               G4ThreeVector(0, 0, 45 * cm),
                               cylinder_with_hole_logic,
                               "cylinder",
-                              detector_logic,
+                              detector_logical,
                               false,
                               0);
 
@@ -92,7 +96,7 @@ G4LogicalVolume* DetectorConstruction::CreateDetector() {
                        0,
                        2 * pi);
 
-    auto cylinder_logic =
+    cylinder_logic =
             new G4LogicalVolume(cylinder_solid,
                                 wolfram,
                                 "cylinder");
@@ -102,11 +106,11 @@ G4LogicalVolume* DetectorConstruction::CreateDetector() {
                               G4ThreeVector(0, 0, -5 * cm),
                               cylinder_logic,
                               "cylinder_with_hole",
-                              detector_logic,
+                              detector_logical,
                               false,
                               0);
-
-    return detector_logic;
+    //SetupDetector();
+    return detector_logical;
 
 }
 
@@ -114,4 +118,14 @@ void DetectorConstruction::InitializeMaterials() {
     auto nist = G4NistManager::Instance();
     vacuum = nist->FindOrBuildMaterial("G4_Galactic");
     wolfram = nist->FindOrBuildMaterial("G4_W");
+}
+
+void DetectorConstruction::ConstructSDandField() {
+    G4VUserDetectorConstruction::ConstructSDandField();
+    auto SDmanager = G4SDManager::GetSDMpointer();
+    auto cylindricalSD = new CylindricalSD("Cylinder", tupleId);
+    SDmanager->AddNewDetector(cylindricalSD);
+    //cylinder_with_hole_logic->SetSensitiveDetector(cylindricalSD);
+    cylinder_with_hole_logic->SetSensitiveDetector(cylindricalSD);
+    cylinder_logic->SetSensitiveDetector(cylindricalSD);
 }

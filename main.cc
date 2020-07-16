@@ -17,21 +17,21 @@ int main(int argc, char **argv) {
     long seed = uid(rd);
     HepRandom::setTheSeed(seed);
     std::cout<<"Seed "<<seed<<std::endl;
-    G4UIExecutive *ui;
-
+    G4UIExecutive *ui = nullptr;
     if(argc == 1) {
         ui = new G4UIExecutive(argc, argv);
     }
-
+    TupleId *tupleId = new TupleId();
     auto runManager = new G4RunManager;
-    runManager->SetUserInitialization(new DetectorConstruction());
+    runManager->SetUserInitialization(new DetectorConstruction(tupleId));
     runManager->SetUserInitialization(new QGSP_BERT());
     runManager->SetUserAction(new PrimaryGeneratorAction());
-    runManager->SetUserAction(new RunAction());
+    runManager->SetUserAction(new RunAction(tupleId));
     runManager->Initialize();
 
-    auto visManager = new G4VisExecutive;
+    G4VisManager* visManager = new G4VisExecutive;
     visManager->Initialise();
+
     auto UImanager = G4UImanager::GetUIpointer();
 
     if(!ui) {

@@ -15,11 +15,10 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event *anEvent) {
     fParticleGun->SetParticlePosition(G4ThreeVector(0, 0, 0));
     auto random = new TRandom;
     random->SetSeed(seed);
-    for (int i = 0; i < 100; ++i) {
+    for (int i = 0; i < 1 ; ++i) {
         random->TRandom::Sphere(x, y, z, 1);
-        std::cout<<x<<"; "<<y<<"; "<<z<<";"<<std::endl;
         fParticleGun->SetParticleMomentumDirection(G4ThreeVector(x, y, z));
-        fParticleGun->SetParticleEnergy(0.5 * GeV);
+        fParticleGun->SetParticleEnergy(1 * GeV);
         fParticleGun->SetParticleDefinition(G4MuonMinus::Definition());
         fParticleGun->GeneratePrimaryVertex(anEvent);
     }

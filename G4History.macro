@@ -19,5 +19,10 @@
 /vis/scene/notifyHandlers
 /vis/scene/add/hits
 /vis/scene/notifyHandlers
+/vis/filtering/trajectories/create/particleFilter
+/vis/filtering/trajectories/particleFilter-0/add mu-
+/vis/scene/notifyHandlers scene-0
 /run/beamOn 1
 /vis/scene/notifyHandlers scene-0
+/run/beamOn 1
+/run/beamOn 1
