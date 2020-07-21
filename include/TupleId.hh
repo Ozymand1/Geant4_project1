@@ -7,5 +7,6 @@ struct TupleId{
     int FortyFiveId = -1;
     int NinetyId = -1;
     int HundredThirtyFiveId = -1;
+    int PosId = -1;
 };
 #endif

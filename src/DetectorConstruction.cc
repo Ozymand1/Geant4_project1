@@ -125,7 +125,7 @@ void DetectorConstruction::ConstructSDandField() {
     auto SDmanager = G4SDManager::GetSDMpointer();
     auto cylindricalSD = new CylindricalSD("Cylinder", tupleId);
     SDmanager->AddNewDetector(cylindricalSD);
-    /*cylinder_with_hole_logic->SetSensitiveDetector(cylindricalSD);
-    cylinder_logic->SetSensitiveDetector(cylindricalSD);*/
-    logicWorld->SetSensitiveDetector(cylindricalSD);
+    cylinder_with_hole_logic->SetSensitiveDetector(cylindricalSD);
+    cylinder_logic->SetSensitiveDetector(cylindricalSD);
+    //logicWorld->SetSensitiveDetector(cylindricalSD);
 }

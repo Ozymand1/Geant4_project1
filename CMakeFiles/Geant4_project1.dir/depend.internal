@@ -141,8 +141,10 @@ CMakeFiles/Geant4_project1.dir/main.cc.o
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4HitFilterFactories.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4HnInformation.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4HnManager.hh
+ /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4IonTable.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4IonisParamElm.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4IonisParamMat.hh
+ /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4Ions.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4Isotope.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4IsotopeVector.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4Log.hh
@@ -992,6 +994,8 @@ CMakeFiles/Geant4_project1.dir/src/PrimaryGeneratorAction.cc.o
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4GeomSplitter.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4GlobalConfig.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4HCofThisEvent.hh
+ /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4IonTable.hh
+ /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4Ions.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4Log.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4LogicalVolume.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4LogicalVolume.icc

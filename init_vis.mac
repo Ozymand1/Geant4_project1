@@ -15,5 +15,5 @@
 /vis/scene/add/date
 /vis/scene/add/hits
 
-/vis/filtering/trajectories/create/particleFilter
-/vis/filtering/trajectories/particleFilter-0/add mu-
+/gun/particle ion
+/gun/ion 79 198 79

@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/Semyon/GEANT4projects/Geant4_project1/src/CylindricalSD.cc
+CylindricalSD.hh
+/home/Semyon/GEANT4projects/Geant4_project1/src/CylindricalSD.hh
+G4MuonMinus.hh
+/home/Semyon/GEANT4projects/Geant4_project1/src/G4MuonMinus.hh
+
 /home/Semyon/GEANT4projects/Geant4_project1/src/DetectorConstruction.cc
 DetectorConstruction.hh
 /home/Semyon/GEANT4projects/Geant4_project1/src/DetectorConstruction.hh
@@ -671,6 +677,14 @@ G4PhysicsOrderedFreeVector.hh
 /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4MaterialTable.hh
 vector
 -
+
+/home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4MuonMinus.hh
+globals.hh
+/home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/globals.hh
+G4ios.hh
+/home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4ios.hh
+G4ParticleDefinition.hh
+/home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4ParticleDefinition.hh
 
 /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4NavigationHistory.hh
 assert.h

@@ -3,19 +3,12 @@
 using namespace CLHEP;
 
 G4bool CylindricalSD::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhist) {
-    if (aStep->GetTrack()->GetParentID() == 0 && aStep->GetTrack()->GetDefinition() == G4MuonMinus::Definition()){
-        auto momentum = aStep->GetPostStepPoint()->GetMomentumDirection();
-        auto theta = momentum.theta() / radian;
-        if (theta >= 0.698132 && theta <= 0.872665){
-            angular[0] = 1;
+    if (aStep->GetTrack()->GetParentID() == 0){
+        if (aStep->IsFirstStepInVolume()) {
+            z = aStep->GetTrack()->GetPosition().z() / cm;
+            std::cout<<"# "<< i << std::endl;
+            i++;
         }
-        if (theta >= 1.48353 && theta <= 1.65806){
-            angular[1] = 1;
-        }
-        if (theta >= 2.26893 && theta <= 2.44346){
-            angular[2] = 1;
-        }
-        energy = aStep->GetPostStepPoint()->GetKineticEnergy();
     }
     return 0;
 }
@@ -24,6 +17,7 @@ CylindricalSD::~CylindricalSD() = default;
 
 void CylindricalSD::Initialize(G4HCofThisEvent *event) {
     G4VSensitiveDetector::Initialize(event);
+    z = 0;
     energy = 0;
     for (int & i : angular) {
         i = 0;
@@ -33,9 +27,11 @@ void CylindricalSD::Initialize(G4HCofThisEvent *event) {
 
 void CylindricalSD::EndOfEvent(G4HCofThisEvent *event) {
     G4VSensitiveDetector::EndOfEvent(event);
-
-
     auto analysisManager = tupleId->analysisManager;
+    analysisManager->FillNtupleDColumn(tupleId->PosId, 0, z);
+    analysisManager->AddNtupleRow(tupleId->PosId);
+
+    /*auto analysisManager = tupleId->analysisManager;
 
     if (angular[0] == 1){
         analysisManager->FillNtupleDColumn(tupleId->FortyFiveId, 0, energy);
@@ -50,6 +46,6 @@ void CylindricalSD::EndOfEvent(G4HCofThisEvent *event) {
     if (angular[2] == 1){
         analysisManager->FillNtupleDColumn(tupleId->HundredThirtyFiveId, 0, energy);
         analysisManager->AddNtupleRow(tupleId->HundredThirtyFiveId);
-    }
+    }*/
 
 }

@@ -20,5 +20,7 @@ public:
 private:
     int angular[3] = {0, 0, 0};
     double energy;
+    double z;
+    long i = 1;
     TupleId* tupleId;
 };

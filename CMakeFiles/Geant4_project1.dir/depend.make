@@ -140,8 +140,10 @@ CMakeFiles/Geant4_project1.dir/main.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/g
 CMakeFiles/Geant4_project1.dir/main.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4HitFilterFactories.hh
 CMakeFiles/Geant4_project1.dir/main.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4HnInformation.hh
 CMakeFiles/Geant4_project1.dir/main.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4HnManager.hh
+CMakeFiles/Geant4_project1.dir/main.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4IonTable.hh
 CMakeFiles/Geant4_project1.dir/main.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4IonisParamElm.hh
 CMakeFiles/Geant4_project1.dir/main.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4IonisParamMat.hh
+CMakeFiles/Geant4_project1.dir/main.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4Ions.hh
 CMakeFiles/Geant4_project1.dir/main.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4Isotope.hh
 CMakeFiles/Geant4_project1.dir/main.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4IsotopeVector.hh
 CMakeFiles/Geant4_project1.dir/main.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4Log.hh
@@ -991,6 +993,8 @@ CMakeFiles/Geant4_project1.dir/src/PrimaryGeneratorAction.cc.o: /home/Semyon/Gea
 CMakeFiles/Geant4_project1.dir/src/PrimaryGeneratorAction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4GeomSplitter.hh
 CMakeFiles/Geant4_project1.dir/src/PrimaryGeneratorAction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4GlobalConfig.hh
 CMakeFiles/Geant4_project1.dir/src/PrimaryGeneratorAction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4HCofThisEvent.hh
+CMakeFiles/Geant4_project1.dir/src/PrimaryGeneratorAction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4IonTable.hh
+CMakeFiles/Geant4_project1.dir/src/PrimaryGeneratorAction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4Ions.hh
 CMakeFiles/Geant4_project1.dir/src/PrimaryGeneratorAction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4Log.hh
 CMakeFiles/Geant4_project1.dir/src/PrimaryGeneratorAction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4LogicalVolume.hh
 CMakeFiles/Geant4_project1.dir/src/PrimaryGeneratorAction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4LogicalVolume.icc
