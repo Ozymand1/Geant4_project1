@@ -23,6 +23,7 @@ private:
     G4LogicalVolume* cylinder_logic;
     G4LogicalVolume* detector_logical;
     G4LogicalVolume* cylinder_with_hole_logic;
+    G4LogicalVolume* logicWorld;
     TupleId* tupleId;
     void InitializeMaterials();
 };

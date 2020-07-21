@@ -18,7 +18,7 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event *anEvent) {
     for (int i = 0; i < 1 ; ++i) {
         random->TRandom::Sphere(x, y, z, 1);
         fParticleGun->SetParticleMomentumDirection(G4ThreeVector(x, y, z));
-        fParticleGun->SetParticleEnergy(1 * GeV);
+        fParticleGun->SetParticleEnergy(500 * MeV);
         fParticleGun->SetParticleDefinition(G4MuonMinus::Definition());
         fParticleGun->GeneratePrimaryVertex(anEvent);
     }

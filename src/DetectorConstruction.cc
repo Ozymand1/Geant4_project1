@@ -23,7 +23,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct() {
                       0.5 * world_sizeXY,
                       0.5 * world_sizeZ);
 
-    auto logicWorld =
+    logicWorld =
             new G4LogicalVolume(solidWorld,
                                 vacuum,
                                 "World");
@@ -42,7 +42,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct() {
 
     auto cylinder =
             new G4PVPlacement(0,
-                              G4ThreeVector(0, 0, -40 * cm),
+                              G4ThreeVector(0, 0,  40 * cm),
                               detector_logic,
                               "cylinder",
                               logicWorld,
@@ -81,7 +81,7 @@ G4LogicalVolume* DetectorConstruction::CreateDetector() {
 
     auto cylinder_with_hole_phys =
             new G4PVPlacement(0,
-                              G4ThreeVector(0, 0, 45 * cm),
+                              G4ThreeVector(0, 0, -45 * cm),
                               cylinder_with_hole_logic,
                               "cylinder",
                               detector_logical,
@@ -103,7 +103,7 @@ G4LogicalVolume* DetectorConstruction::CreateDetector() {
 
     auto cylinder_phys =
             new G4PVPlacement(0,
-                              G4ThreeVector(0, 0, -5 * cm),
+                              G4ThreeVector(0, 0, 5 * cm),
                               cylinder_logic,
                               "cylinder_with_hole",
                               detector_logical,
@@ -125,7 +125,7 @@ void DetectorConstruction::ConstructSDandField() {
     auto SDmanager = G4SDManager::GetSDMpointer();
     auto cylindricalSD = new CylindricalSD("Cylinder", tupleId);
     SDmanager->AddNewDetector(cylindricalSD);
-    //cylinder_with_hole_logic->SetSensitiveDetector(cylindricalSD);
-    cylinder_with_hole_logic->SetSensitiveDetector(cylindricalSD);
-    cylinder_logic->SetSensitiveDetector(cylindricalSD);
+    /*cylinder_with_hole_logic->SetSensitiveDetector(cylindricalSD);
+    cylinder_logic->SetSensitiveDetector(cylindricalSD);*/
+    logicWorld->SetSensitiveDetector(cylindricalSD);
 }
