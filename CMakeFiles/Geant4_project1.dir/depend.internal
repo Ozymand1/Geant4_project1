@@ -519,6 +519,7 @@ CMakeFiles/Geant4_project1.dir/src/CylindricalSD.cc.o
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4IonisParamMat.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4Isotope.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4IsotopeVector.hh
+ /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4JPsi.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4Log.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4LogicalVolume.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4LogicalVolume.icc
@@ -996,6 +997,7 @@ CMakeFiles/Geant4_project1.dir/src/PrimaryGeneratorAction.cc.o
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4HCofThisEvent.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4IonTable.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4Ions.hh
+ /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4JPsi.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4Log.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4LogicalVolume.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4LogicalVolume.icc
@@ -1091,8 +1093,13 @@ CMakeFiles/Geant4_project1.dir/src/PrimaryGeneratorAction.cc.o
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/pwdefs.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/templates.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/tls.hh
+ /home/Semyon/Root6/root/include/Bytes.h
+ /home/Semyon/Root6/root/include/Byteswap.h
  /home/Semyon/Root6/root/include/DllImport.h
+ /home/Semyon/Root6/root/include/ESTLType.h
+ /home/Semyon/Root6/root/include/Math/ParamFunctor.h
  /home/Semyon/Root6/root/include/Math/TRandomEngine.h
+ /home/Semyon/Root6/root/include/Math/Types.h
  /home/Semyon/Root6/root/include/RConfigure.h
  /home/Semyon/Root6/root/include/ROOT/RConfig.hxx
  /home/Semyon/Root6/root/include/ROOT/RSpan.hxx
@@ -1104,17 +1111,49 @@ CMakeFiles/Geant4_project1.dir/src/PrimaryGeneratorAction.cc.o
  /home/Semyon/Root6/root/include/RVersion.h
  /home/Semyon/Root6/root/include/Rtypes.h
  /home/Semyon/Root6/root/include/RtypesCore.h
+ /home/Semyon/Root6/root/include/TArray.h
+ /home/Semyon/Root6/root/include/TArrayD.h
+ /home/Semyon/Root6/root/include/TAttFill.h
+ /home/Semyon/Root6/root/include/TAttLine.h
+ /home/Semyon/Root6/root/include/TAttMarker.h
+ /home/Semyon/Root6/root/include/TBits.h
+ /home/Semyon/Root6/root/include/TBuffer.h
+ /home/Semyon/Root6/root/include/TClass.h
+ /home/Semyon/Root6/root/include/TCollection.h
+ /home/Semyon/Root6/root/include/TDataType.h
+ /home/Semyon/Root6/root/include/TDatime.h
+ /home/Semyon/Root6/root/include/TDictionary.h
+ /home/Semyon/Root6/root/include/TDirectory.h
+ /home/Semyon/Root6/root/include/TError.h
+ /home/Semyon/Root6/root/include/TF1.h
+ /home/Semyon/Root6/root/include/TF1AbsComposition.h
+ /home/Semyon/Root6/root/include/TF2.h
+ /home/Semyon/Root6/root/include/TFormula.h
  /home/Semyon/Root6/root/include/TGenericClassInfo.h
+ /home/Semyon/Root6/root/include/TInterpreter.h
+ /home/Semyon/Root6/root/include/TInterpreterValue.h
  /home/Semyon/Root6/root/include/TIsAProxy.h
+ /home/Semyon/Root6/root/include/TIterator.h
+ /home/Semyon/Root6/root/include/TList.h
+ /home/Semyon/Root6/root/include/TMath.h
  /home/Semyon/Root6/root/include/TMathBase.h
+ /home/Semyon/Root6/root/include/TMethodCall.h
  /home/Semyon/Root6/root/include/TNamed.h
+ /home/Semyon/Root6/root/include/TObjArray.h
+ /home/Semyon/Root6/root/include/TObjString.h
  /home/Semyon/Root6/root/include/TObject.h
+ /home/Semyon/Root6/root/include/TROOT.h
  /home/Semyon/Root6/root/include/TRandom.h
  /home/Semyon/Root6/root/include/TSchemaHelper.h
+ /home/Semyon/Root6/root/include/TSeqCollection.h
  /home/Semyon/Root6/root/include/TStorage.h
  /home/Semyon/Root6/root/include/TString.h
+ /home/Semyon/Root6/root/include/TUUID.h
  /home/Semyon/Root6/root/include/TVersionCheck.h
  /home/Semyon/Root6/root/include/TVirtualIsAProxy.h
+ /home/Semyon/Root6/root/include/TVirtualMutex.h
+ /home/Semyon/Root6/root/include/TVirtualRWMutex.h
+ /home/Semyon/Root6/root/include/ThreadLocalStorage.h
  /home/Semyon/Root6/root/include/snprintf.h
  /home/Semyon/Root6/root/include/strlcpy.h
  include/PrimaryGeneratorAction.hh

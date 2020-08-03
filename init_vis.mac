@@ -15,5 +15,4 @@
 /vis/scene/add/date
 /vis/scene/add/hits
 
-/gun/particle ion
-/gun/ion 79 198 79
+/run/beamOn 100

@@ -18,9 +18,22 @@ public:
     void EndOfEvent(G4HCofThisEvent *event) override;
 
 private:
-    int angular[3] = {0, 0, 0};
-    double energy;
-    double z;
-    long i = 1;
+    bool flag1 = true;
+    bool flag2 = true;
+    bool flag3 = true;
     TupleId* tupleId;
+    double MuPlusMTB = 0;
+    double MuPlusMPB = 0;
+    double MuPlusMTA = 0;
+    double MuPlusMPA = 0;
+    double MuMinusMTB = 0;
+    double MuMinusMPB = 0;
+    double MuMinusMTA = 0;
+    double MuMinusMPA = 0;
+    double JpsiMT = 0;
+    double JpsiMP = 0;
+    double momentumAbs = 0;
+    double momentumTheta = 0;
+    bool arr[5] = {false, false, false, false, false};
+    long i = 0, k = 0;
 };

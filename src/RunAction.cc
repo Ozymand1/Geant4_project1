@@ -4,30 +4,30 @@
 
 void RunAction::BeginOfRunAction(const G4Run *aRun) {
     G4AnalysisManager *analysisManager = G4Analysis::ManagerInstance("root");
-    analysisManager->OpenFile("4GeVnAuRun");
+    analysisManager->OpenFile("JpsiRun");
     tupleId->analysisManager = analysisManager;
 
-    int PosId = analysisManager->CreateNtuple("Z_position", "4Gev/n Au Run");
-    analysisManager->CreateNtupleDColumn("Z, cm");
-    analysisManager->FinishNtuple(PosId);
-    tupleId->PosId = PosId;
-    /*analysisManager->OpenFile("500MeVRunData");
-    tupleId->analysisManager = analysisManager;
+    int JpsiId = analysisManager->CreateNtuple("JpsiMomentum", "JpsiRunJpsi");
+    analysisManager->CreateNtupleDColumn("TransverseMomentum");
+    analysisManager->CreateNtupleDColumn("ParallelMomentum");
+    analysisManager->FinishNtuple(JpsiId);
+    tupleId->JpsiId = JpsiId;
 
-    int FortyFiveId = analysisManager->CreateNtuple("FortyFive", "0.5 Run data");
-    analysisManager->CreateNtupleDColumn("A" + std::to_string(45));
-    analysisManager->FinishNtuple(FortyFiveId);
-    tupleId->FortyFiveId = FortyFiveId;
+    int MuPlusId = analysisManager->CreateNtuple("MuonPlusMomentum", "JpsiRunMuonPlus");
+    analysisManager->CreateNtupleDColumn("TransverseMomentumBefore");
+    analysisManager->CreateNtupleDColumn("ParallelMomentumBefore");
+    analysisManager->CreateNtupleDColumn("TransverseMomentumAfter");
+    analysisManager->CreateNtupleDColumn("ParallelMomentumAfter");
+    analysisManager->FinishNtuple(MuPlusId);
+    tupleId->MuPlusId = MuPlusId;
 
-    int NinetyId = analysisManager->CreateNtuple("Ninety", "0.5 Run data");
-    analysisManager->CreateNtupleDColumn("A" + std::to_string(90));
-    analysisManager->FinishNtuple(NinetyId);
-    tupleId->NinetyId = NinetyId;
-
-    int HundredThirtyFiveId = analysisManager->CreateNtuple("HundredAndFive", "0.5 Run data");
-    analysisManager->CreateNtupleDColumn("A" + std::to_string(135));
-    analysisManager->FinishNtuple(HundredThirtyFiveId);
-    tupleId->HundredThirtyFiveId = HundredThirtyFiveId;*/
+    int MuMinusId = analysisManager->CreateNtuple("MuonMinusMomentum", "JpsiRunMuonMinus");
+    analysisManager->CreateNtupleDColumn("TransverseMomentumBefore");
+    analysisManager->CreateNtupleDColumn("ParallelMomentumBefore");
+    analysisManager->CreateNtupleDColumn("TransverseMomentumAfter");
+    analysisManager->CreateNtupleDColumn("ParallelMomentumAfter");
+    analysisManager->FinishNtuple(MuMinusId);
+    tupleId->MuMinusId = MuMinusId;
 }
 
 void RunAction::EndOfRunAction(const G4Run *aRun) {

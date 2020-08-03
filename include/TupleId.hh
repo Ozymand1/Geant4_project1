@@ -4,9 +4,8 @@
 
 struct TupleId{
     G4AnalysisManager* analysisManager;
-    int FortyFiveId = -1;
-    int NinetyId = -1;
-    int HundredThirtyFiveId = -1;
-    int PosId = -1;
+    int JpsiId = -1;
+    int MuPlusId = -1;
+    int MuMinusId = -1;
 };
 #endif

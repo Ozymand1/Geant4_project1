@@ -67,7 +67,7 @@ G4LogicalVolume* DetectorConstruction::CreateDetector() {
                                 "detector");
 
     auto cylinder_with_hole_solid =
-            new G4Tubs("cylinder",
+            new G4Tubs("cylinder_with_hole",
                        0.5 * hole_diameter,
                        0.5 * cylinder_diameter,
                        0.5 * hole_lenght,
@@ -83,7 +83,7 @@ G4LogicalVolume* DetectorConstruction::CreateDetector() {
             new G4PVPlacement(0,
                               G4ThreeVector(0, 0, -45 * cm),
                               cylinder_with_hole_logic,
-                              "cylinder",
+                              "cylinder_with_hole",
                               detector_logical,
                               false,
                               0);
@@ -105,7 +105,7 @@ G4LogicalVolume* DetectorConstruction::CreateDetector() {
             new G4PVPlacement(0,
                               G4ThreeVector(0, 0, 5 * cm),
                               cylinder_logic,
-                              "cylinder_with_hole",
+                              "cylinder",
                               detector_logical,
                               false,
                               0);
@@ -123,9 +123,12 @@ void DetectorConstruction::InitializeMaterials() {
 void DetectorConstruction::ConstructSDandField() {
     G4VUserDetectorConstruction::ConstructSDandField();
     auto SDmanager = G4SDManager::GetSDMpointer();
-    auto cylindricalSD = new CylindricalSD("Cylinder", tupleId);
-    SDmanager->AddNewDetector(cylindricalSD);
-    cylinder_with_hole_logic->SetSensitiveDetector(cylindricalSD);
-    cylinder_logic->SetSensitiveDetector(cylindricalSD);
-    //logicWorld->SetSensitiveDetector(cylindricalSD);
+    auto cylindricalSD1 = new CylindricalSD("Cylinder1", tupleId);
+    SDmanager->AddNewDetector(cylindricalSD1);
+    auto cylindricalSD2 = new CylindricalSD("Cylinder2", tupleId);
+    SDmanager->AddNewDetector(cylindricalSD2);
+    cylinder_with_hole_logic->SetSensitiveDetector(cylindricalSD1);
+    cylinder_logic->SetSensitiveDetector(cylindricalSD2);
+
+
 }
