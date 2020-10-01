@@ -715,6 +715,8 @@ CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4BaseAnalysisManager.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4BaseFileManager.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4BinScheme.hh
+ /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4BooleanSolid.hh
+ /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4BooleanSolid.icc
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4BoundingEnvelope.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4Box.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4Box.icc
@@ -722,6 +724,7 @@ CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4CollectionNameVector.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4DataVector.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4DataVector.icc
+ /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4DisplacedSolid.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4DynamicParticle.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4DynamicParticle.icc
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4ElectronOccupancy.hh
@@ -826,6 +829,7 @@ CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4UAdapter.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4UBox.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4UTubs.hh
+ /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4UnionSolid.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4VAnalysisManager.hh
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4VAnalysisManager.icc
  /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4VExceptionHandler.hh

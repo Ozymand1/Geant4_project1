@@ -12,7 +12,9 @@
 
 /vis/geometry/set/colour cylinder 0 0.5 0.5 0.5
 /vis/geometry/set/forceSolid cylinder
+/vis/geometry/set/colour cylinder_with_hole 0 0.5 0.5 0.5
+/vis/geometry/set/forceSolid cylinder_with_hole
 /vis/scene/add/date
 /vis/scene/add/hits
 
-/run/beamOn 100
+

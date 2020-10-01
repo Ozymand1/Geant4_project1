@@ -20,6 +20,7 @@ public:
     double GammaCMS = 1.621;
     double Ppar = 0;
     double Pperp = 0;
+    double Ppar1 = 0;
     double JpsiMass = 3.097;
     double JpsiEnergy = 0;
     double Beta = 0;

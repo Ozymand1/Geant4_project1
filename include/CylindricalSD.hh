@@ -34,6 +34,13 @@ private:
     double JpsiMP = 0;
     double momentumAbs = 0;
     double momentumTheta = 0;
+    double cosThetaMMT = 0;
+    double cosThetaMMG = 0;
+    double cosThetaMPT = 0;
+    double cosThetaMPG = 0;
     bool arr[5] = {false, false, false, false, false};
     long i = 0, k = 0;
+    int number = 0;
+    int numberAnti = 0;
+    double next[3];
 };

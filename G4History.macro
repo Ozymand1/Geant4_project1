@@ -15,9 +15,11 @@
 /vis/scene/notifyHandlers
 /vis/geometry/set/forceSolid cylinder
 /vis/scene/notifyHandlers
+/vis/geometry/set/colour cylinder_with_hole 0 0.5 0.5 0.5
+/vis/scene/notifyHandlers
+/vis/geometry/set/forceSolid cylinder_with_hole
+/vis/scene/notifyHandlers
 /vis/scene/add/date
 /vis/scene/notifyHandlers
 /vis/scene/add/hits
 /vis/scene/notifyHandlers
-/run/beamOn 100
-/vis/scene/notifyHandlers scene-0

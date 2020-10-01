@@ -7,6 +7,7 @@
 #include "G4LogicalVolume.hh"
 #include "G4SystemOfUnits.hh"
 #include <G4Tubs.hh>
+#include <G4UnionSolid.hh>
 
 #include "CylindricalSD.hh"
 
@@ -44,7 +45,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct() {
             new G4PVPlacement(0,
                               G4ThreeVector(0, 0,  40 * cm),
                               detector_logic,
-                              "cylinder",
+                              "cylinder_and_with_hole",
                               logicWorld,
                               false,
                               0);
@@ -53,18 +54,14 @@ G4VPhysicalVolume* DetectorConstruction::Construct() {
 }
 
 G4LogicalVolume* DetectorConstruction::CreateDetector() {
-    auto detectorSolid =
-            new G4Tubs("Detector",
+    /*auto detectorSolid =
+            new G4Tubs("detector",
                         0,
                         0.5 *  cylinder_diameter,
                         0.5 * cylinder_lenght,
                         0,
-                        2 * pi);
+                        2 * pi);*/
 
-    detector_logical =
-            new G4LogicalVolume(detectorSolid,
-                                vacuum,
-                                "detector");
 
     auto cylinder_with_hole_solid =
             new G4Tubs("cylinder_with_hole",
@@ -77,7 +74,7 @@ G4LogicalVolume* DetectorConstruction::CreateDetector() {
     cylinder_with_hole_logic =
             new G4LogicalVolume(cylinder_with_hole_solid,
                                 wolfram,
-                                "cylinder");
+                                "cylinder_with_hole");
 
     auto cylinder_with_hole_phys =
             new G4PVPlacement(0,
@@ -95,20 +92,34 @@ G4LogicalVolume* DetectorConstruction::CreateDetector() {
                        0.5 * (cylinder_lenght - hole_lenght),
                        0,
                        2 * pi);
-
     cylinder_logic =
             new G4LogicalVolume(cylinder_solid,
                                 wolfram,
                                 "cylinder");
 
-    auto cylinder_phys =
+    auto cyl_full = new G4UnionSolid("cyl_full", cylinder_solid, cylinder_with_hole_solid);
+    detector_logical =
+            new G4LogicalVolume(cyl_full,
+                                wolfram,
+                                "detector");
+    /*auto cyl_full_phys = new G4PVPlacement(0,
+                                           G4ThreeVector(0, 0, 0 * cm),
+                                           detector_logical,
+                                           "full_cylinder",
+                                           logicWorld,
+                                           false,
+                                           0);*/
+
+
+
+    /*auto cylinder_phys =
             new G4PVPlacement(0,
                               G4ThreeVector(0, 0, 5 * cm),
                               cylinder_logic,
                               "cylinder",
                               detector_logical,
                               false,
-                              0);
+                              0);*/
     //SetupDetector();
     return detector_logical;
 
@@ -127,8 +138,10 @@ void DetectorConstruction::ConstructSDandField() {
     SDmanager->AddNewDetector(cylindricalSD1);
     auto cylindricalSD2 = new CylindricalSD("Cylinder2", tupleId);
     SDmanager->AddNewDetector(cylindricalSD2);
-    cylinder_with_hole_logic->SetSensitiveDetector(cylindricalSD1);
-    cylinder_logic->SetSensitiveDetector(cylindricalSD2);
+    /*cylinder_with_hole_logic->SetSensitiveDetector(cylindricalSD1);
+    cylinder_logic->SetSensitiveDetector(cylindricalSD2);*/
+
+    detector_logic->SetSensitiveDetector(cylindricalSD1);
 
 
 }

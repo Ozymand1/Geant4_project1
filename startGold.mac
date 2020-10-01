@@ -1,0 +1,3 @@
+/gun/particle ion
+/gun/ion 79 197 79
+/run/beamOn 100000

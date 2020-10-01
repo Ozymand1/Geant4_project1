@@ -714,6 +714,8 @@ CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant
 CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4BaseAnalysisManager.hh
 CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4BaseFileManager.hh
 CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4BinScheme.hh
+CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4BooleanSolid.hh
+CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4BooleanSolid.icc
 CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4BoundingEnvelope.hh
 CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4Box.hh
 CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4Box.icc
@@ -721,6 +723,7 @@ CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant
 CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4CollectionNameVector.hh
 CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4DataVector.hh
 CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4DataVector.icc
+CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4DisplacedSolid.hh
 CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4DynamicParticle.hh
 CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4DynamicParticle.icc
 CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4ElectronOccupancy.hh
@@ -825,6 +828,7 @@ CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant
 CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4UAdapter.hh
 CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4UBox.hh
 CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4UTubs.hh
+CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4UnionSolid.hh
 CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4VAnalysisManager.hh
 CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4VAnalysisManager.icc
 CMakeFiles/Geant4_project1.dir/src/DetectorConstruction.cc.o: /home/Semyon/Geant4/geant4.10.06.p02/geant4.10.06.p02-install/include/Geant4/G4VExceptionHandler.hh

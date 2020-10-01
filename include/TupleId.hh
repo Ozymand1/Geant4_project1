@@ -7,5 +7,11 @@ struct TupleId{
     int JpsiId = -1;
     int MuPlusId = -1;
     int MuMinusId = -1;
+    int MuonMCosTargetId = -1;
+    int MuonMCosGenId = -1;
+    int MuonPCosTargetId = -1;
+    int MuonPCosGenId = -1;
+    int histId[13] = {-1};
+    int histId1[13] = {-1};
 };
 #endif
