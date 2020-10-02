@@ -23,3 +23,5 @@
 /vis/scene/notifyHandlers
 /vis/scene/add/hits
 /vis/scene/notifyHandlers
+/run/beamOn 1
+/vis/scene/notifyHandlers scene-0

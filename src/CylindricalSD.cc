@@ -5,11 +5,10 @@
 using namespace CLHEP;
 
 G4bool CylindricalSD::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhist) {
-    std::cout<<aStep->GetTrack()->GetTrackID()<<std::endl;
     if (aStep->GetTrack()->GetParentID() == 0 && aStep->GetTrack()->GetParticleDefinition() == G4JPsi::Definition()) {
         if (flag1) {
             momentumAbs = aStep->GetPreStepPoint()->GetMomentum().mag() / GeV;
-            momentumTheta = aStep->GetPreStepPoint()->GetMomentumDirection().theta() / radian;
+            momentumTheta = aStep->GetPreStepPoint()->GetMomentumDirection().theta() / degree;
             JpsiMP = momentumAbs * cos(momentumTheta);
             JpsiMT = momentumAbs * sin(momentumTheta);
             flag1 = false;
@@ -21,23 +20,20 @@ G4bool CylindricalSD::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhist) {
     }
 
     if (aStep->GetTrack()->GetParentID() == 0 && aStep->GetTrack()->GetParticleDefinition()->GetAntiPDGEncoding() == -13) {
-        //std::cout<<aStep->GetTrack()->GetVolume()->GetName()<<std::endl;
-        if (flag2 && aStep->GetTrack()->GetVolume()->GetName() == "cylinder"){
+        std::cout<<aStep->GetTrack()->GetVolume()->GetName()<<std::endl;
+        if (flag2 && aStep->GetTrack()->GetVolume()->GetName() == "cylinder") {
             auto momentum = aStep->GetPreStepPoint()->GetMomentum().mag() / GeV;
-            auto theta = aStep->GetPreStepPoint()->GetMomentumDirection().theta() / radian;
+            auto theta = aStep->GetPreStepPoint()->GetMomentumDirection().theta() / degree;
             MuMinusMPB = momentum * cos(theta);
             MuMinusMTB = momentum * sin(theta);
             cosThetaMMT = cos(theta);
             flag2 = false;
             arr[1] = true;
-            number = aStep->GetTrack()->GetTrackID();
-            /*std::cout<<number<<std::endl;
-            std::cout<<cosThetaMMT<<std::endl;*/
-
         }
+
         if (aStep->IsLastStepInVolume() == 1 && aStep->GetTrack()->GetNextVolume()->GetName() == "World"){
             auto momentum = aStep->GetTrack()->GetMomentum().mag() / GeV;
-            auto theta = aStep->GetTrack()->GetMomentumDirection().theta() / radian;
+            auto theta = aStep->GetTrack()->GetMomentumDirection().theta() / degree;
             MuMinusMPA = momentum * cos(theta);
             MuMinusMTA = momentum * sin(theta);
             cosThetaMMG = cos(theta);
@@ -49,7 +45,7 @@ G4bool CylindricalSD::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhist) {
         std::cout<<aStep->GetTrack()->GetVolume()->GetName()<<std::endl;
         if (flag3 && aStep->GetTrack()->GetVolume()->GetName() == "cylinder"){
             auto momentum = aStep->GetPreStepPoint()->GetMomentum().mag() / GeV;
-            auto theta = aStep->GetPreStepPoint()->GetMomentumDirection().theta() / radian;
+            auto theta = aStep->GetPreStepPoint()->GetMomentumDirection().theta() / degree;
             MuPlusMPB = momentum * cos(theta);
             MuPlusMTB = momentum * sin(theta);
             cosThetaMPT = cos(theta);

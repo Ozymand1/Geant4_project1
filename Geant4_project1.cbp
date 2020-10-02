@@ -125,10 +125,16 @@
 		<Unit filename="/home/Semyon/GEANT4projects/Geant4_project1/src/DetectorConstruction.cc">
 			<Option target="Geant4_project1"/>
 		</Unit>
+		<Unit filename="/home/Semyon/GEANT4projects/Geant4_project1/src/EventAction.cc">
+			<Option target="Geant4_project1"/>
+		</Unit>
 		<Unit filename="/home/Semyon/GEANT4projects/Geant4_project1/src/PrimaryGeneratorAction.cc">
 			<Option target="Geant4_project1"/>
 		</Unit>
 		<Unit filename="/home/Semyon/GEANT4projects/Geant4_project1/src/RunAction.cc">
+			<Option target="Geant4_project1"/>
+		</Unit>
+		<Unit filename="/home/Semyon/GEANT4projects/Geant4_project1/src/SteppingAction.cc">
 			<Option target="Geant4_project1"/>
 		</Unit>
 		<Unit filename="/home/Semyon/GEANT4projects/Geant4_project1/CMakeLists.txt">

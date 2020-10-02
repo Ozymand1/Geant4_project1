@@ -7,6 +7,8 @@
 #include <G4UImanager.hh>
 #include <RunAction.hh>
 #include <random>
+#include "EventAction.hh"
+#include "SteppingAction.hh"
 #include "G4RunManager.hh"
 
 using namespace CLHEP;
@@ -23,10 +25,14 @@ int main(int argc, char **argv) {
     }
     TupleId *tupleId = new TupleId();
     auto runManager = new G4RunManager;
-    runManager->SetUserInitialization(new DetectorConstruction(tupleId));
+    auto detConstruction = new DetectorConstruction(tupleId);
+    runManager->SetUserInitialization(detConstruction);
     runManager->SetUserInitialization(new QGSP_BERT());
     runManager->SetUserAction(new PrimaryGeneratorAction());
     runManager->SetUserAction(new RunAction(tupleId));
+    auto eventAction = new EventAction(tupleId);
+    runManager->SetUserAction(eventAction);
+    runManager->SetUserAction(new SteppingAction(detConstruction, eventAction));
     runManager->Initialize();
 
     G4VisManager* visManager = new G4VisExecutive;

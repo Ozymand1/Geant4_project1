@@ -3,6 +3,7 @@
 
 
 void RunAction::BeginOfRunAction(const G4Run *aRun) {
+    std::cout<<"meow"<<std::endl;
     G4AnalysisManager *analysisManager = G4Analysis::ManagerInstance("root");
     analysisManager->OpenFile("JpsiRun");
     tupleId->analysisManager = analysisManager;
@@ -113,10 +114,12 @@ void RunAction::BeginOfRunAction(const G4Run *aRun) {
 }
 
 void RunAction::EndOfRunAction(const G4Run *aRun) {
+    std::cout<<"meow2"<<std::endl;
     G4UserRunAction::EndOfRunAction(aRun);
     G4AnalysisManager* analysisManager = G4Analysis::ManagerInstance("root");
     analysisManager->Write();
     analysisManager->CloseFile(true);
+    std::cout<<"meow3"<<std::endl;
 }
 
 RunAction::RunAction(TupleId *tupleId) : tupleId(tupleId) {

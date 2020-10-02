@@ -10,7 +10,7 @@ public:
 
     G4VPhysicalVolume* Construct() override;
 
-    void ConstructSDandField() override;
+    //void ConstructSDandField() override;
 
     explicit DetectorConstruction(TupleId* tupleId) : tupleId(tupleId){
         InitializeMaterials();

@@ -54,14 +54,16 @@ G4VPhysicalVolume* DetectorConstruction::Construct() {
 }
 
 G4LogicalVolume* DetectorConstruction::CreateDetector() {
-    /*auto detectorSolid =
+    auto detectorSolid =
             new G4Tubs("detector",
-                        0,
-                        0.5 *  cylinder_diameter,
-                        0.5 * cylinder_lenght,
-                        0,
-                        2 * pi);*/
-
+                       0,
+                       0.5 *  cylinder_diameter,
+                       0.5 * cylinder_lenght,
+                       0,
+                       2 * pi);
+    detector_logical = new G4LogicalVolume(detectorSolid,
+                                            vacuum,
+                                            "detector");
 
     auto cylinder_with_hole_solid =
             new G4Tubs("cylinder_with_hole",
@@ -70,20 +72,10 @@ G4LogicalVolume* DetectorConstruction::CreateDetector() {
                        0.5 * hole_lenght,
                        0,
                        2 * pi);
-
     cylinder_with_hole_logic =
             new G4LogicalVolume(cylinder_with_hole_solid,
                                 wolfram,
                                 "cylinder_with_hole");
-
-    auto cylinder_with_hole_phys =
-            new G4PVPlacement(0,
-                              G4ThreeVector(0, 0, -45 * cm),
-                              cylinder_with_hole_logic,
-                              "cylinder_with_hole",
-                              detector_logical,
-                              false,
-                              0);
 
     auto cylinder_solid =
             new G4Tubs("cylinder",
@@ -97,30 +89,23 @@ G4LogicalVolume* DetectorConstruction::CreateDetector() {
                                 wolfram,
                                 "cylinder");
 
-    auto cyl_full = new G4UnionSolid("cyl_full", cylinder_solid, cylinder_with_hole_solid);
-    detector_logical =
-            new G4LogicalVolume(cyl_full,
-                                wolfram,
-                                "detector");
-    /*auto cyl_full_phys = new G4PVPlacement(0,
-                                           G4ThreeVector(0, 0, 0 * cm),
-                                           detector_logical,
-                                           "full_cylinder",
-                                           logicWorld,
-                                           false,
-                                           0);*/
-
-
-
-    /*auto cylinder_phys =
+    auto cylinder_with_hole_phys =
+            new G4PVPlacement(0,
+                              G4ThreeVector(0, 0, -45 * cm),
+                              cylinder_with_hole_logic,
+                              "cylinder_with_hole",
+                              detector_logical,
+                              false,
+                              0);
+    auto cylinder_phys =
             new G4PVPlacement(0,
                               G4ThreeVector(0, 0, 5 * cm),
                               cylinder_logic,
                               "cylinder",
                               detector_logical,
                               false,
-                              0);*/
-    //SetupDetector();
+                              0);
+
     return detector_logical;
 
 }
@@ -131,17 +116,17 @@ void DetectorConstruction::InitializeMaterials() {
     wolfram = nist->FindOrBuildMaterial("G4_W");
 }
 
-void DetectorConstruction::ConstructSDandField() {
+/*void DetectorConstruction::ConstructSDandField() {
     G4VUserDetectorConstruction::ConstructSDandField();
     auto SDmanager = G4SDManager::GetSDMpointer();
     auto cylindricalSD1 = new CylindricalSD("Cylinder1", tupleId);
     SDmanager->AddNewDetector(cylindricalSD1);
     auto cylindricalSD2 = new CylindricalSD("Cylinder2", tupleId);
     SDmanager->AddNewDetector(cylindricalSD2);
-    /*cylinder_with_hole_logic->SetSensitiveDetector(cylindricalSD1);
-    cylinder_logic->SetSensitiveDetector(cylindricalSD2);*/
+    cylinder_with_hole_logic->SetSensitiveDetector(cylindricalSD1);
+    cylinder_logic->SetSensitiveDetector(cylindricalSD2);
 
-    detector_logic->SetSensitiveDetector(cylindricalSD1);
+    //detector_logical->SetSensitiveDetector(cylindricalSD1);
 
 
-}
+}*/
