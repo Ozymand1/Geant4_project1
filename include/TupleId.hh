@@ -11,7 +11,7 @@ struct TupleId{
     int MuonMCosGenId = -1;
     int MuonPCosTargetId = -1;
     int MuonPCosGenId = -1;
-    int histId[13] = {-1};
-    int histId1[13] = {-1};
+    int histId[18] = {-1};
+    int histId1[18] = {-1};
 };
 #endif

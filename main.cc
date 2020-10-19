@@ -10,7 +10,7 @@
 #include "EventAction.hh"
 #include "SteppingAction.hh"
 #include "G4RunManager.hh"
-
+#include "G4ScoringManager.hh"
 using namespace CLHEP;
 
 int main(int argc, char **argv) {
@@ -24,6 +24,7 @@ int main(int argc, char **argv) {
         ui = new G4UIExecutive(argc, argv);
     }
     TupleId *tupleId = new TupleId();
+    auto scorManager = G4ScoringManager::GetScoringManager();
     auto runManager = new G4RunManager;
     auto detConstruction = new DetectorConstruction(tupleId);
     runManager->SetUserInitialization(detConstruction);
@@ -34,7 +35,6 @@ int main(int argc, char **argv) {
     runManager->SetUserAction(eventAction);
     runManager->SetUserAction(new SteppingAction(detConstruction, eventAction));
     runManager->Initialize();
-
     G4VisManager* visManager = new G4VisExecutive;
     visManager->Initialise();
 

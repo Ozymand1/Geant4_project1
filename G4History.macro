@@ -5,6 +5,12 @@
 /vis/scene/create
 /vis/scene/add/volume worlds -1 -1 none m 0 0 0 0 0 0
 /vis/sceneHandler/attach
+/control/loop drawSlice.mac iColumn 0 29 7
+/score/drawColumn boxMesh_1 eDep 0 0
+/score/drawColumn boxMesh_1 eDep 0 7
+/score/drawColumn boxMesh_1 eDep 0 14
+/score/drawColumn boxMesh_1 eDep 0 21
+/score/drawColumn boxMesh_1 eDep 0 28
 /vis/scene/add/trajectories
 /tracking/storeTrajectory 1
 /vis/scene/notifyHandlers
@@ -23,5 +29,7 @@
 /vis/scene/notifyHandlers
 /vis/scene/add/hits
 /vis/scene/notifyHandlers
-/run/beamOn 1
+/run/beamOn 100
+/run/geometryModified
 /vis/scene/notifyHandlers scene-0
+/score/dumpAllQuantitiesToFile boxMesh_1 data

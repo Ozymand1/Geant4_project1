@@ -1,3 +1,13 @@
+/score/create/boxMesh boxMesh_1
+/score/mesh/boxSize 5. 5. 5. cm
+/score/mesh/nBin 10 10 10
+/score/quantity/flatSurfaceCurrent eDep
+/score/filter/particle muonFilter mu-
+/score/close
+/score/list
+/score/colorMap/setMinMax ! 0. 800.
+/score/drawProjection boxMesh_1 eDep
+
 /vis/open OGL
 /control/saveHistory
 
@@ -5,6 +15,7 @@
 /vis/viewer/set/background white
 /vis/geometry/set/colour all -1 0 0 0
 /vis/drawVolume worlds
+/control/loop drawSlice.mac iColumn 0 29 7
 /vis/scene/add/trajectories
 /vis/scene/endOfEventAction accumulate
 /vis/scene/add/axes
@@ -16,5 +27,5 @@
 /vis/geometry/set/forceSolid cylinder_with_hole
 /vis/scene/add/date
 /vis/scene/add/hits
-
-
+/run/beamOn 100
+/score/dumpAllQuantitiesToFile boxMesh_1 data

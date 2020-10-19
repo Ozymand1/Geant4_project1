@@ -21,11 +21,11 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event *anEvent) {
     auto random = new TRandom;
     random->SetSeed(seed);
     auto func2 = new TF1("func2", "exp(-4002.11 * x)", 0, 0.002);
-    auto func1 = new TF2("func1", "7.7*10^(-11)*(4 - x^2)^13 * e^(-2*y^2 / (4 - x^2)^2)", -1, 1, 0, 10);
+    auto func1 = new TF2("func1", "7.7*10^(-11)*(4 - x^2)^13 * e^(-2*y^2 / (4 - x^2)^2)", -2, 2, 0, 10);
     func1->GetRandom2(Ppar, Pperp);
     Ppar = Ppar * Pmax;
     Ppar1 = Ppar * Pmax;
-    while (pow(Ppar, 2) + pow(Pperp, 2) > Pmax * Pmax){
+    while (pow(Ppar, 2) + pow(Pperp, 2) > 4 * Pmax * Pmax){
         func1->GetRandom2(Ppar1, Pperp);
     }
     JpsiEnergy = sqrt(pow(Pperp, 2) + pow(Ppar, 2) + pow(JpsiMass, 2));

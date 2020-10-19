@@ -1,4 +1,3 @@
-
 #include "DetectorConstruction.hh"
 #include <G4NistManager.hh>
 #include <G4Box.hh>
@@ -7,10 +6,6 @@
 #include "G4LogicalVolume.hh"
 #include "G4SystemOfUnits.hh"
 #include <G4Tubs.hh>
-#include <G4UnionSolid.hh>
-
-#include "CylindricalSD.hh"
-
 
 G4VPhysicalVolume* DetectorConstruction::Construct() {
     G4bool checkOverlaps = true;
